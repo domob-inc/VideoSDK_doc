@@ -1,12 +1,10 @@
-##### IndependentVideoSDK文件夹中包含:
+#### 一.运行环境要求
 
-* 1.静态库libIndependentVideoSDK.a
+* 视频SDK适用的手机系统和开发工具版本等。
 
-* 2.主头文件IndependentVideoManager.h
+#### 二.SDK文件介绍
 
-* 3.资源包IndependentVideoBundle.bundle, 包含SDK中要使用的图片资源
-
-* 4.国际化资源文件\(含en.lproj ,  zh-Hans.lproj\),媒体根据需要添加即可
+* 视频SDK包中包含的各类文件及用途说明。
 
 
 
