@@ -20,7 +20,7 @@
 
 ![](/assets/lib.png)
 
-#### 5.添加-Objc
+#### 5.添加-ObjC
 
 Build Settings搜索并在other link flags 选项添加-ObjC，如下图：
 
