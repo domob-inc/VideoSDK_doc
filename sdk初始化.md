@@ -1,4 +1,4 @@
-#### 初始化
+#### SDK初始化
 
 ```
 #import "IndependentVideoManager.h"

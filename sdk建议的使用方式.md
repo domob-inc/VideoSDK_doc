@@ -11,7 +11,7 @@ _videoManager.delegate = self;
 [_videoManager checkVideoAvailable];
 ```
 
-* * 2.check之后，回调一方法中的available会返回YES/NO值
+* * 2.check之后，**回调一**方法中的available会返回YES/NO值
 
 ```
 // 检查是否有视频
@@ -27,7 +27,7 @@ _videoManager.delegate = self;
 }
 ```
 
-* * 3.如果available为YES，后台会加载当前视频，调用回调三方法，isFinished有YES/NO值
+* * 3.如果available为YES，后台会加载当前视频，调用**回调三**方法，isFinished有YES/NO值
 
 ```
 // 有视频时,加载是否完成。
@@ -44,7 +44,7 @@ _videoManager.delegate = self;
 }
 ```
 
-* * 4.视频播放完成会调用回调七方法，可用于开发者统计播放完成和给用户发放奖励的依据
+* * 4.视频播放完成会调用**回调七**方法，可用于开发者统计播放完成和给用户发放奖励的依据
 
 ```
 // 视频播放完成
@@ -55,7 +55,7 @@ _videoManager.delegate = self;
 }
 ```
 
-* * 5.落地页关闭时，可调用checkVideoAvailable检查到下一条视频的状态，形成一个闭环操作
+* * 5.落地页关闭时，会执行**回调六**方法，可调用checkVideoAvailable检查到下一条视频的状态，形成一个闭环操作
 
 ```
 //  视频落地页面关闭。

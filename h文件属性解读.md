@@ -25,7 +25,7 @@
 /**
  *  用于展示sotre或者展示类广告的控制器
  */
-@property(nonatomic,unsafe_unretained)UIViewController *rootViewController;
+@property(nonatomic,assign)UIViewController *rootViewController;
 
 #pragma mark - init 初始化相关方法
 /**
@@ -33,7 +33,6 @@
  *  Create IndependentVideoManager with your own Publisher ID
  *
  *  @param publisherID 媒体ID
- *
  *  @return IndependentVideoManager
  */
 - (instancetype)initWithPublisherID:(NSString *)publisherID;
@@ -63,6 +62,7 @@
  *  Present independent video in ModelView way with App's rootViewController.
  */
 - (void)presentIndependentVideo;
+
 /**
  *  使用开发者传入的UIViewController来弹出视频。
  *  Present IndependentVideo with developer's controller.
