@@ -1,6 +1,6 @@
 ##### IndependentVideoSDK文件夹内包含三部分:
 
-* 1.文件夹内包含静态库libIndependentVideoSDK.a，
+* 1.文件夹内包含静态库libIndependentVideoSDK.a文件
 
 * * 一个真机和模拟器的合并包，包体较大（7-8M）方便开发者日常开发调试
 * * 一个真机包，包体较小（4M以内），可用于App的发布上线
