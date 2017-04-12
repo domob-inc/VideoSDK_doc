@@ -2,7 +2,9 @@
 
 ### v1.0.3
 > Add “region” request parameter. if use “region”  statistics info will break down by country。
+
 > usage:
+
 > region=all
 > media statistics info return as a json list，each object contain a certain country info：
 > request example： get http://dvx.domob.cn/api/applications/XXXXXXX
@@ -24,13 +26,15 @@
 |GET /api/applications |key=[API TOKEN]|	return all apps info|
 
 ```php
-[{  "deverid": "62555", //Domob developer id
+[
+	{  
+	"deverid": "62555", //Domob developer id
     "pubid" : "XXXXX", //publisher id  of the app
     "name" : "割绳子", //name of the app
     "platform" : "iOS", //platform
     "status" : "1" //app status，0 for running,  1 for paused
-},
-… …
+	},
+	… …
 ]
 ```
 #### 2.
