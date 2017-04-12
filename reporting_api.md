@@ -1,14 +1,14 @@
 # Reporting API for Publishers v.1.0.3
 
 ### v1.0.3
-    Add “region” request parameter. if use “region”  statistics info will break down by country。
-    usage:
-    region=all
-    media statistics info return as a json list，each object contain a certain country info：
-    request example： get http://dvx.domob.cn/api/applications/XXXXXXX
-    result example：[{"dt":"20170401","request":"1081428","imp_start":"420","imp_finish":"315","clk":"83","revenue":11912120,"ecpm":37.82}, “region” :11560000, {"dt":"20170401","request":"1081428","imp_start":"420","imp_finish":"315","clk":"83","revenue":11912120,"ecpm”:37.82，region” :11560000,}…]
-    region=SPECIFIC_REGION_CODE
-    you can get specific country statistics by this method. regoin code map you could find in Region Code section.
+> Add “region” request parameter. if use “region”  statistics info will break down by country。
+> usage:
+> region=all
+> media statistics info return as a json list，each object contain a certain country info：
+> request example： get http://dvx.domob.cn/api/applications/XXXXXXX
+> result example：[{"dt":"20170401","request":"1081428","imp_start":"420","imp_finish":"315","clk":"83","revenue":11912120,"ecpm":37.82}, “region” :11560000, {"dt":"20170401","request":"1081428","imp_start":"420","imp_finish":"315","clk":"83","revenue":11912120,"ecpm”:37.82，region” :11560000,}…]
+> region=SPECIFIC_REGION_CODE
+> you can get specific country statistics by this method. regoin code map you could find in Region Code section.
 
 ### v1.0.2
     Add USD($) currency type for reporting. you can add a "cur=usd" query param to get reporting currency type as USD, "cur" param is optional, default currency type is RMB. (using bid exchange rate from Yahoo! and updated by day, this number should be only used for reference, actual exchange rate may different.)
