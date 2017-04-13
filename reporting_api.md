@@ -6,11 +6,12 @@ Add “region” request parameter. if use “region”  statistics info will br
 usage:
 
 region=all
+
 media statistics info return as a json list，each object contain a certain country info：
-request example： get http://dvx.domob.cn/api/applications/XXXXXXX
-result example：[{"dt":"20170401","request":"1081428","imp_start":"420","imp_finish":"315","clk":"83","revenue":11912120,"ecpm":37.82}, “region” :11560000, {"dt":"20170401","request":"1081428","imp_start":"420","imp_finish":"315","clk":"83","revenue":11912120,"ecpm”:37.82，region” :11560000,}…]
+
 region=SPECIFIC_REGION_CODE
-you can get specific country statistics by this method. regoin code map you could find in Region Code section.
+
+you can get specific country statistics by this method. regoin code map you could find in Region Code sectioni at bottom.
 
 ### v1.0.2
 Add USD($) currency type for reporting. you can add a "cur=usd" query param to get reporting currency type as USD, "cur" param is optional, default currency type is RMB. (using bid exchange rate from Yahoo! and updated by day, this number should be only used for reference, actual exchange rate may different.)
@@ -51,6 +52,7 @@ add hr section support for specify time info.
 ||dt_start=[yyyy-mm-dd]||
 ||dt_end=[yyyy-mm-dd]||
 ||[cur=usd]||
+||region=[region code or all]||
 
 ##### Example
 ```php
@@ -88,7 +90,7 @@ add hr section support for specify time info.
 ```
 
 #### 3.
-    1 . Get all applications.
+    ##### Get all applications.
 ``` php
  bash: curl -X GET \
         -G 'http://dvx.domob.cn/api/applications' \
@@ -127,7 +129,7 @@ add hr section support for specify time info.
 ]
 ```
 
-    2 . Get specific date statistics of one application.
+    ##### Get specific date statistics of one application.
 
 ```php
  bash: curl -X GET \
@@ -146,7 +148,7 @@ return:
     "ecpm": 60
 }
 ```
-    3 . Get specific date range statistics of one application.
+    ##### Get specific date range statistics of one application.
 ```php
 bash:curl -X GET \
           G 'http://dvx.domob.cn/api/applications/96Z...-edY/wTBSK' \
@@ -166,7 +168,7 @@ return:
     "ecpm": 111.69
 }
 ```
-    4 . Get specific date statistics of one application.
+    ##### Get specific date statistics of one application.
 ```php
 bash: curl -X GET \
            -G 'http://dvx.domob.cn/api/applications/96Z...-edY/wTBSK' \
@@ -186,7 +188,7 @@ return:
     "ecpm": 72
 }
 ```
-    5 . Using "cur=usd" when get report.
+    ##### Using "cur=usd" when get report.
 ```php
 bash: curl -X GET \
            -G 'http://dvx.domob.cn/api/applications/96Z...-edY/wTBSK' \
@@ -208,8 +210,65 @@ return:
 }
 ```
 
+	##### Using "region=all" each object contain a certain country info：
+```php
+bash: curl -X GET \
+            -G 'http://dvx.domob.cn/api/applications/96Z...-edY/wTBSK' \
+            -d 'key=NTA0Mzk4MTgwNzA2..2MjNhZWNiNzRm' \
+            -d 'dt=20160401' \
+			-d 'region=all'
 
-##### Enclosure1
+return:
+
+[
+	{
+		"dt":"20170401",
+		"request":"1081428",
+		"imp_start":"420",
+		"imp_finish":"315",
+		"clk":"83",
+		"revenue":11912120,
+		"ecpm":37.82, 
+		“region” :11560000
+	},
+	{
+		"dt":"20170401",
+		"request":"1081428",
+		"imp_start":"420",
+		"imp_finish":"315",
+		"clk":"83",
+		"revenue":11912120,
+		"ecpm”:37.82,
+		region” :11560000
+	}
+	......
+]
+```
+
+	##### Using "region=SPECIFIC_REGION_CODE" you can get specific country statistics by this method.
+```php
+bash: curl -X GET \
+            -G 'http://dvx.domob.cn/api/applications/96Z...-edY/wTBSK' \
+            -d 'key=NTA0Mzk4MTgwNzA2..2MjNhZWNiNzRm' \
+            -d 'dt=20160401' \
+			-d 'region=11560000'
+
+return:
+{
+	"dt":"20170401",
+	"request":"1081428",
+	"imp_start":"420",
+	"imp_finish":"315",
+	"clk":"83",
+	"revenue":11912120,
+	"ecpm":37.82, 
+	“region” :11560000
+}
+
+```
+
+#### Enclosure1:
+
 | code | region |
 | -------- | -----: |
 |71000000|Taiwan|
