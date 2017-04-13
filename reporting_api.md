@@ -1,24 +1,24 @@
 # Reporting API for Publishers v.1.0.3
 
 ### v1.0.3
-> Add “region” request parameter. if use “region”  statistics info will break down by country。
+Add “region” request parameter. if use “region”  statistics info will break down by country。
 
-> usage:
+usage:
 
-> region=all
-> media statistics info return as a json list，each object contain a certain country info：
-> request example： get http://dvx.domob.cn/api/applications/XXXXXXX
-> result example：[{"dt":"20170401","request":"1081428","imp_start":"420","imp_finish":"315","clk":"83","revenue":11912120,"ecpm":37.82}, “region” :11560000, {"dt":"20170401","request":"1081428","imp_start":"420","imp_finish":"315","clk":"83","revenue":11912120,"ecpm”:37.82，region” :11560000,}…]
-> region=SPECIFIC_REGION_CODE
-> you can get specific country statistics by this method. regoin code map you could find in Region Code section.
+region=all
+media statistics info return as a json list，each object contain a certain country info：
+request example： get http://dvx.domob.cn/api/applications/XXXXXXX
+result example：[{"dt":"20170401","request":"1081428","imp_start":"420","imp_finish":"315","clk":"83","revenue":11912120,"ecpm":37.82}, “region” :11560000, {"dt":"20170401","request":"1081428","imp_start":"420","imp_finish":"315","clk":"83","revenue":11912120,"ecpm”:37.82，region” :11560000,}…]
+region=SPECIFIC_REGION_CODE
+you can get specific country statistics by this method. regoin code map you could find in Region Code section.
 
 ### v1.0.2
-    Add USD($) currency type for reporting. you can add a "cur=usd" query param to get reporting currency type as USD, "cur" param is optional, default currency type is RMB. (using bid exchange rate from Yahoo! and updated by day, this number should be only used for reference, actual exchange rate may different.)
+Add USD($) currency type for reporting. you can add a "cur=usd" query param to get reporting currency type as USD, "cur" param is optional, default currency type is RMB. (using bid exchange rate from Yahoo! and updated by day, this number should be only used for reference, actual exchange rate may different.)
 
-    Add v2 version for reporting(revenue unit change to *1 rather than v1's *1000000) to use v2 version , query URL changed from /api/applications to /api_v2/applications.
+Add v2 version for reporting(revenue unit change to *1 rather than v1's *1000000) to use v2 version , query URL changed from /api/applications to /api_v2/applications.
     
 ### v1.0.1
-    add hr section support for specify time info.
+add hr section support for specify time info.
 
 #### 1.
 | Resource |  Param(s) | Description |
