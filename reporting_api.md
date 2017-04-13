@@ -19,7 +19,7 @@ Add USD($) currency type for reporting. you can add a "cur=usd" query param to g
 Add v2 version for reporting(revenue unit change to *1 rather than v1's *1000000) to use v2 version , query URL changed from /api/applications to /api_v2/applications.
     
 ### v1.0.1
-add hr section support for specify time info.
+Add hr section support for specify time info.
 
 #### 1.
 | Resource |  Param(s) | Description |
@@ -90,7 +90,7 @@ add hr section support for specify time info.
 ```
 
 #### 3.
-    ##### Get all applications.
+    1) Get all applications.
 ``` php
  bash: curl -X GET \
         -G 'http://dvx.domob.cn/api/applications' \
@@ -129,7 +129,7 @@ add hr section support for specify time info.
 ]
 ```
 
-    ##### Get specific date statistics of one application.
+    2) Get specific date statistics of one application.
 
 ```php
  bash: curl -X GET \
@@ -148,7 +148,7 @@ return:
     "ecpm": 60
 }
 ```
-    ##### Get specific date range statistics of one application.
+    3) Get specific date range statistics of one application.
 ```php
 bash:curl -X GET \
           G 'http://dvx.domob.cn/api/applications/96Z...-edY/wTBSK' \
@@ -168,7 +168,7 @@ return:
     "ecpm": 111.69
 }
 ```
-    ##### Get specific date statistics of one application.
+    4) Get specific date statistics of one application.
 ```php
 bash: curl -X GET \
            -G 'http://dvx.domob.cn/api/applications/96Z...-edY/wTBSK' \
@@ -188,7 +188,7 @@ return:
     "ecpm": 72
 }
 ```
-    ##### Using "cur=usd" when get report.
+    5) Using "cur=usd" when get report.
 ```php
 bash: curl -X GET \
            -G 'http://dvx.domob.cn/api/applications/96Z...-edY/wTBSK' \
@@ -210,7 +210,7 @@ return:
 }
 ```
 
-	##### Using "region=all" each object contain a certain country info：
+	6) Using "region=all" each object contain a certain country info：
 ```php
 bash: curl -X GET \
             -G 'http://dvx.domob.cn/api/applications/96Z...-edY/wTBSK' \
@@ -245,7 +245,7 @@ return:
 ]
 ```
 
-	##### Using "region=SPECIFIC_REGION_CODE" you can get specific country statistics by this method.
+	7) Using "region=SPECIFIC_REGION_CODE" you can get specific country statistics by this method.
 ```php
 bash: curl -X GET \
             -G 'http://dvx.domob.cn/api/applications/96Z...-edY/wTBSK' \
