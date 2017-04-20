@@ -4,9 +4,7 @@
 
 #### 2.获取视频SDK
 
-方式1：在官网下载SDK包
-
-方式2：[https://github.com/domob-inc/DomobVideoSDK](https://github.com/domob-inc/DomobVideoSDK) github也可下载到SDK
+方式：[https://github.com/domob-inc/DomobVideoSDK](https://github.com/domob-inc/DomobVideoSDK) github下载到SDK
 
 #### 3.集成SDK到项目中
 

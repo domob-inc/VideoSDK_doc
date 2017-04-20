@@ -7,23 +7,17 @@
 @property(nonatomic,weak)id<IndependentVideoManagerDelegate>delegate;
 
 /**
- *  是否禁用StoreKit库提供的应用内打开store页面的功能，采用跳出应用打开OS内置AppStore。
- *  默认为NO，即使用StoreKit。
- */
-@property (nonatomic, assign) BOOL disableStoreKit;
-
-/**
- *  是否禁用在播放完成后弹出弹框，默认为NO，即不禁用，则弹出
+ *  是否禁用在播放完成后弹出弹框，默认为YES，即禁用，则不弹出
  */
 @property (nonatomic, assign) BOOL disableShowAlert;
 
 /**
- *  4G网络是否直接下载，默认YES，为下载(表示不弹出提示)
+ * 是否开启打印日志log,默认不开启,为NO
  */
-@property (nonatomic, assign) BOOL should4GDownload;
+@property (nonatomic, assign) BOOL openLogger;
 
 /**
- *  用于展示sotre或者展示类广告的控制器
+ *  用于展示sotre或者展示类广告的控制器,可以为nil
  */
 @property(nonatomic,assign)UIViewController *rootViewController;
 
@@ -39,7 +33,7 @@
 
 /**
  *  使用PublisherID和应用当前登陆用户的UserID初始化IndependentVideoManager
- *   Create IndependentVideoManager with your own Publisher ID and User ID.
+ *  Create IndependentVideoManager with your own Publisher ID and User ID.
  *
  *  @param publisherID 媒体ID
  *  @param userID      应用中唯一标识用户的ID, 可传入nil

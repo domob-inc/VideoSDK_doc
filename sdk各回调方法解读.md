@@ -1,6 +1,6 @@
 #### IndependentVideoManagerDelegate回调方法解读：
 
-可以通过实现IndependentVideoManagerDelegate中定义的方法，来跟踪视频生命周期的各个阶段。所有这些方法也都定义在IndependentVideoManager.h中，具体如下：
+可以通过实现IndependentVideoManagerDelegate中定义的方法，来跟踪视频生命周期的各个阶段。所有这些方法也都定义在IndependentVideoManager.h中，**所有代理方法都是可选实现的, ** 具体如下：
 
 ```
 #pragma mark - video present callback 视频生命周期各个阶段的回调(八个回调方法)
